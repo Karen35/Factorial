@@ -1,0 +1,50 @@
+<!--COMENTARIOS-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>FACTORIAL DE UN NÚMERO</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		//alert("hola mundo");
+		$("#btnFactorial").click(function(){
+
+			var n1 = parseInt($("#num").val());
+			var resultado = 1;
+
+			for ( var i = 1; i <= n1; i++){
+				//resultado = resultado * i;
+				resultado *=i;
+			}	
+
+	  		//alert("El factorial es "+resultado);
+	  		$("#resultado").val(resultado);
+		});
+
+	});
+	
+</script>
+
+</head>
+<body>
+	<div data-role="page" id="Principal">
+		<div  data-role="header">
+			<p>Principal</p>	
+		</div>
+		<div data-role="content">
+			<p>FACTORIAL</p>
+
+			<input type="text" id="num" placeholder="Escribe un número">
+			<input type="button" id="btnFactorial" value="Calcular Factorial">
+			<input type="text" id="resultado" placeholder="Resultado">
+			
+		</div>
+		<div data-role="footer">
+			<p>Pie de la aplicación</p>                                                      		
+		</div>
+	</div>
+	</body>
+</html>
